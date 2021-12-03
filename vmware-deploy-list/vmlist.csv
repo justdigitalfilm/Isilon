@@ -1,0 +1,2 @@
+VMName,IPAddr,Mask,Gway,PortGrp,NumCpu,PerSock,Mem,Folder
+SOMESERVER-01,10.10.10.10,255.255.255.0,10.10.10.1,"1000-somevlan",8,4,12,VMFolder
