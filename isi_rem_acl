@@ -1,6 +1,9 @@
 function rem_acl () {
 # Usage:  rem_acl <path>
 # Will remove all ACLs on the path <path>
+loop () {
 line=$(ls -led $1 | grep 0:)
-if ! [ -z "${line}" ]; then chmod -a# 0 $1; fi
+if ! [ -z "${line}" ]; then chmod -a# 0 $1; loop $1; else exit fi
+}
+loop $1
 }
